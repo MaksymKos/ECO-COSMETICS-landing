@@ -1,7 +1,14 @@
 @import "utils";
-@import "fonts";
-@import "typography";
-
-body {
-  background: $c-gray;
-}
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/side-title";
+@import "blocks/add";
+@import "blocks/about";
+@import "blocks/shop";
+@import "blocks/creators";
+@import "blocks/tooth";
+@import "blocks/benefits";
+@import "blocks/contacts";
+@import "blocks/product-card";
+@import "blocks/footer";
