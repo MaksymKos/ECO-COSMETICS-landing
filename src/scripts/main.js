@@ -12,6 +12,14 @@ window.addEventListener('hashchange', () => {
   }
 });
 
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#product') {
+    document.body.classList.add('page__body--menu');
+  } else {
+    document.body.classList.remove('page__body--menu');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.shop__card');
 

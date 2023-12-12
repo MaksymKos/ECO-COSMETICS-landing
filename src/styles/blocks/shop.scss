@@ -51,7 +51,7 @@
     transition: $transition-time;
 
     @for $card-number from 1 through 4 {
-      &--#{$card-number}:checked~.shop__cards .shop__card--#{$card-number} {
+      &--#{$card-number}:checked ~ .shop__cards .shop__card--#{$card-number} {
         display: block;
 
         @include on-tablet {
@@ -63,15 +63,18 @@
         $next-card-number: $card-number + 1;
 
         @if $next-card-number <= 4 {
-
-          &--#{$card-number}:checked~.shop__cards .shop__card--#{$next-card-number},
-          &--#{$next-card-number}:checked~.shop__cards .shop__card--#{$next-card-number} {
+          &--#{$card-number}:checked
+            ~ .shop__cards
+            .shop__card--#{$next-card-number},
+          &--#{$next-card-number}:checked
+            ~ .shop__cards
+            .shop__card--#{$next-card-number} {
             display: block;
           }
         }
       }
 
-      &--#{$card-number}:checked+.shop__label--#{$card-number} {
+      &--#{$card-number}:checked + .shop__label--#{$card-number} {
         color: $dark-grey-c;
       }
     }
@@ -115,11 +118,10 @@
       width: calc(50% - 20px);
       flex-shrink: 0;
       transition: $transition-time;
-      &:hover{
+      &:hover {
         transform: scale(105%);
       }
     }
-
   }
 
   &__img {
